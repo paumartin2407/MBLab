@@ -392,7 +392,7 @@ h6 {
   background-color: rgba(59, 59, 59, 0.8);
   overflow: hidden;
   padding: 0;
-  margin-bottom: -120px;
+  margin-bottom: 50px;
   position: relative;
   z-index: 1;
 }
