@@ -76,6 +76,16 @@ class otherLabMembers(models.Model):
         verbose_name = 'Past Lab Member'
         verbose_name_plural = 'Past Lab Members'
 
+class positions(models.Model):
+    tittle = models.CharField(max_length=50)
+    text = models.TextField()
+    URL = models.CharField(max_length=200, blank=True)
+    def __str__(self):
+        return "%s" % (self.tittle)
+    class Meta:
+        verbose_name = 'Position'
+        verbose_name_plural = 'Positions'
+
 
 
 

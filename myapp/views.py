@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpRequest, HttpResponse, JsonResponse
 from django.core import serializers
 import json
-from .models import Question, PubHL, labCollabs, otherLabMembers, currentLabMember, pub
+from .models import Question, PubHL, labCollabs, otherLabMembers, currentLabMember, pub, positions
 import logging
 
 
@@ -32,6 +32,9 @@ def contact(request):
 
 def outreach(request):
     return render(request, 'outreach.html')
+
+def positionsHtml(request):
+    return render(request, 'positions.html')
 
 def detail(request, question_id):
     q = Question.objects.get(id=question_id).question_text
@@ -68,6 +71,13 @@ def getLabCollabs(request):
 def getLabMembers(request):
     if request.method=='GET':
         ls = currentLabMember.objects.all()
+        data = serializers.serialize('json', ls)
+        return JsonResponse(data, safe=False, status=200)
+    return JsonResponse(dict(), safe=False, status=404)
+
+def getPositions(request):
+    if request.method=='GET':
+        ls = positions.objects.all()
         data = serializers.serialize('json', ls)
         return JsonResponse(data, safe=False, status=200)
     return JsonResponse(dict(), safe=False, status=404)

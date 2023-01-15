@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio - Eterna Bootstrap Template</title>
+  <title>Eterna Bootstrap Template - Index</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  {% load static %}
+ {% load static %}
 
   <!-- Favicons -->
   <link href="{% static '/assets/img/favicon.png' %}" rel="icon">
@@ -31,13 +31,23 @@
   <link href="{% static '/assets/css/style.css' %}" rel="stylesheet">
 
   <!-- My Shit -->
-  <script src="{% static '/assets/js/renderers/peopleRender.js' %}" type="module"> </script>
+  <script src="{% static '/assets/js/renderers/positionsRender.js' %}" type="module"> </script>
+
 
   <!-- =======================================================
   * Template Name: Eterna - v4.9.0
   * Template URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
+
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="icon-box">
+                <h3><a href="">No positions available</a></h3>
+                <p>Not for the moment, we´ll add new ones soon:)</p>
+              </div>
+            </div>
+          </div>
   ======================================================== -->
 </head>
 
@@ -48,9 +58,9 @@
     <div class="container d-flex justify-content-between align-items-center">
 
       <div class="logo">
-        <h1><a href="index.html">MBLab</a></h1>
+        <h1><a href="index.html">Eterna</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="static/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
@@ -70,63 +80,20 @@
 
   <main id="main">
 
-    <div class="container">
-      <div class="section-title-peo" style="padding-top: 2em;">
-        <h2>People</h2>
-      </div>
-    </div>
-    <div style="background-color: #dee2e6; padding: 2em;">
+    <!-- ======= Positions Section ======= -->
+    <section id="featured" class="featured">
       <div class="container">
-        <h4><strong>Group Leader</strong></h4>
-      </div>
-      <div class="row" >
-        <div class="col-lg-3 text-center mt-3 mb-4 ms-5">
-          <img src="static/assets/img/portfolio/FotoLola.jpg" style="border-radius: 10%;" width="150" class="img-fluid" alt="">
+        <div class="section-title-pos" style="padding-top: 2em;">
+          <h2>Positions</h2>
         </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content mb-4">
-          <h5 class="mt-3" style="font-weight: 300; text-align: justify;">
-            <span style="color: #e6573f">Maria D (Lola) Martin-Bermudo</span> completed her undergraduate degree in Biochemistry and Molecular Biology at the 
-            Universidad Autónoma in Madrid (Spain) and her PhD in Cell and Developmental Biology at Centro de Biología 
-            Molecular Severo Ochoa, Madrid (Spain). She then moved to UK to work in the laboratory of Nichola H. Brown, 
-            Gurdon Institute, Cambridge (UK) as a postdoctoral fellow. She became a group leader at the Department of 
-            Physiology, Development and Neuroscience at the University of Cambridge (UK), before being awarded a tenure 
-            track position from the Spanish Research Council (CSIC), at the Instituto de Parasitología y Biomedicina López-Neyra 
-            in 2000. In 2004, she moved to the CABD, CSIC-Univ. Pablo de Olavide, Seville (Spain).<br>
-          </h5>
-          <a href="">mdmarber@upo.es</a>
-        </div>
+        <div id="positions"></div>
       </div>
-    </div>
-    <div class="container">
-      <div class="row mt-5">
-        <h4 class="mt-2"><strong>Current Lab Members</strong></h4>
-      </div>
-      <div id="currentLabMembersContainer"></div>
-      <div class="row mt-5">
-        <h4 class="mt-2"><strong>Lab Colaborations</strong></h4>
-      </div>
-      <div id="labCollaborationsContainer"></div>
-      <div class="row mt-5 mb-3">
-        <h4 class="mt-2"><strong>Past Lab Members</strong></h4>
-      </div>
-      <div id="pastLabMembersContainer" class="mb-5">
-        {% for elem in otherLabMembersLs %}
-        <div class="card border-0">
-          <div class="card-body">
-            <h5 class="card-title">{{elem.name}}</h5>
-            <p class="card-text">
-              {{elem.text}}
-            </p>
-          </div>
-        </div>
-        {% endfor %}
-    </div>
+    </section><!-- End Positions Section -->
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-  
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -150,7 +117,6 @@
               Phone: +34 954348674<br>
               e-mail: mdmarber@upo.es<br><br>
             </p>
-
           </div>
         </div>
       </div>
@@ -183,6 +149,7 @@
 
   <!-- Template Main JS File -->
   <script src="{% static '/assets/js/main.js' %}"></script>
+
 
 </body>
 

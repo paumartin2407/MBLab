@@ -9,6 +9,7 @@ urlpatterns = [
     path('team', views.team, name='team'),
     path('outreach', views.outreach, name='outreach'),
     path('contact', views.contact, name='contact'),
+    path('positions', views.positionsHtml, name='positions'),
 
     path('myapp/question/<int:question_id>/', views.detail),
     path('myapp/getQuestions/', views.questions), 
@@ -16,4 +17,5 @@ urlpatterns = [
     path('myapp/getAllPub/', views.getAllPub),
     path('myapp/getLabCollabs/', views.getLabCollabs),
     path('myapp/getLabMembers/', views.getLabMembers),
+    path('myapp/getPositions/', views.getPositions),
 ]

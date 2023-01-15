@@ -762,6 +762,32 @@ section {
   /*left: calc(6% - 25px);*/
 }
 
+.section-title-pos {
+  text-align: left;
+  padding-bottom: 30px;
+}
+
+.section-title-pos h2 {
+  margin-right: 40px;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title-pos h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 135px;
+  height: 3px;
+  background: #e96b56;
+  bottom: 0;
+  /*left: calc(6% - 25px);*/
+}
+
 .section-title p {
   margin-bottom: 0;
 }
@@ -847,6 +873,7 @@ section {
 
 .featured .icon-box:hover {
   background: #e96b56;
+  cursor: pointer;
 }
 
 .featured .icon-box:hover i,
